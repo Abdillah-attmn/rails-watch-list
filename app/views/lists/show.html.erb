@@ -5,15 +5,14 @@
 <div class="row">
   <div class="cards">
     <% @list.movies.each do |movie| %>
-      <div class='mt-2 card-category'>
-        <a href='<%= list_path(list) %>'>
-          <button class="styled rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.image_url %>)"
-            type="button">
-          <%= list.name %>
-          </button>
-        </a>
-      </div>
+      <%= link_to movie_path(movie) do %>
+        <div class='mt-2 card-category btn styled' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url %>)">
+          <%= movie.title %>
+        </div>
+      <% end %>
     <% end %>
-    <%= link_to 'Back', lists_path %>
   </div>
+</div>
+<div class=row>
+  <%= link_to 'Back', root_path %>
 </div>
