@@ -40,12 +40,12 @@ fifth_movie = Movie.create!(
   rating: 7.0
 )
 
-first_list = List.create!(name: 'Drama')
-second_list = List.create!(name: 'All time favourites')
-third_list = List.create!(name: 'Girl Power')
+first_list = List.create!(name: 'Drama', image_url: 'https://media.gqmagazine.fr/photos/602a685fa7e774b0f42a1fc0/master/w_3000,h_2032,c_limit/MSDTITA_FE057.jpg')
+second_list = List.create!(name: 'All time favourites', image_url: 'https://blog.cambly.com/wp-content/uploads/2016/07/favorite-movies-of-all-time.png?w=700')
+third_list = List.create!(name: 'Girl Power', image_url: 'https://image.shutterstock.com/image-vector/girl-power-inscription-handwritten-bright-260nw-1024195720.jpg')
 
 Bookmark.create!(comment: 'Recommended by John', movie: third_movie, list: second_list)
 Bookmark.create!(comment: 'Superhero movie revisited in 2020', movie: first_movie, list: third_list)
 Bookmark.create!(comment: "Spielberg's masterly Oscar-winning drama", movie: second_movie, list: second_list)
 Bookmark.create!(comment: '2020 release', movie: fifth_movie, list: first_list)
-Bookmark.create!(comment: "Based on Stephen King's 1996 novel")
+Bookmark.create!(comment: "Based on Stephen King's 1996 novel", movie: fourth_movie, list: third_list)

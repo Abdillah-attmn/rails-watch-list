@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.image_url %>);">
+      <h1> <%= @list.name %> </h1>
+  </div><br><br>
+
+<div class="row">
+  <div class="cards">
+    <% @list.movies.each do |movie| %>
+      <div class='mt-2 card-category'>
+        <a href='<%= list_path(list) %>'>
+          <button class="styled rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.image_url %>)"
+            type="button">
+          <%= list.name %>
+          </button>
+        </a>
+      </div>
+    <% end %>
+    <%= link_to 'Back', lists_path %>
+  </div>
+</div>

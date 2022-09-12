@@ -18,3 +18,26 @@
     color: white;
   }
 }
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-category {
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.styled{
+  color: white;
+  width: 380px;
+  height: 250px;
+  background-size: 100%;
+}
